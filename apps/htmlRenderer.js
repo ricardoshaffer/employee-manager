@@ -19,7 +19,7 @@ const render = employees => {
     .map(intern => renderIntern(intern))
   );
 
-  return renderMain(html.join(""));
+  return renderIndex(html.join(""));
 
 };
 
@@ -29,7 +29,7 @@ const renderManager = manager => {
   template = replacePlaceholders(template, "role", manager.getRole());
   template = replacePlaceholders(template, "email", manager.getEmail());
   template = replacePlaceholders(template, "id", manager.getId());
-  template = replacePlaceholders(template, "officeNumber", manager.getOfficeNumber());
+  template = replacePlaceholders(template, "officeNumber", manager.getofficeNumber());
   return template;
 };
 
@@ -53,7 +53,7 @@ const renderIntern = intern => {
   return template;
 };
 
-const renderMain = html => {
+const renderIndex = html => {
   const template = fs.readFileSync(path.resolve(templatesDir, "index.html"), "utf8");
   return replacePlaceholders(template, "team", html);
 };
