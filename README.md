@@ -10,6 +10,9 @@ Generate employee dashboard utilizing the CLI (Command Line Interface) then gene
     * tests: run tests utilizing test instructions
 * files for: employee (global), engineer, intern, & manager.
 * content folder: contains page content for the automatic structuring of files.
+* **after running**
+    * new file: will generate an 'output' folder.
+    * updated file: will remain within the 'output' folder.
 
 ## Installation
 *   clone git file into CLI
