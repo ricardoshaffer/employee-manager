@@ -32,8 +32,10 @@ const employeeData = [
         type: `input`,
         message: `what's employee's e-mail?`,
         name: `email`,
-        validate: function validateemail(name){
-            return name !== '';
+        validate: function validateEmail(email)
+        {
+           var reg = new RegExp(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/igm);
+           return reg.test(email) || "that's not a valid email.";
         }
 
     },
